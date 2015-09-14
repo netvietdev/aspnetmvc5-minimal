@@ -2,7 +2,7 @@
 A simple starting template for MVC4 project
 
 # Live Demo
-http://mvcmin.azurewebsites.net
+http://mvc4min.apphb.com/
 
 ## ^^^
 
