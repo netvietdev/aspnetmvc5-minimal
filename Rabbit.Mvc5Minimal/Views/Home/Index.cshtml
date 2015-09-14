@@ -1,0 +1,32 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="label label-info">Index - Welcome</h2>
+<br />
+<br />
+<br />
+
+<div class="well">
+    The minimal MVC5 application with
+    <ol>
+        <li>ASP.NET version @Environment.Version</li>
+        <li>Bootstrap</li>
+        <li>JQuery</li>
+    </ol>
+</div>
+<div>
+    <label class="label label-info">Server time @DateTime.Now.ToString(CultureInfo.InvariantCulture)</label>
+</div>
+
+<br />
+<br />
+<div>
+    <small>
+        <a href="https://github.com/netvietdev/aspnetmvc4-minimal">
+            <span class="glyphicon glyphicon-home"></span>
+            Github
+        </a>
+    </small>
+</div>
