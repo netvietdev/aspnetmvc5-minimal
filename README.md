@@ -1,8 +1,8 @@
-# aspnetmvc4-minimal
-A simple starting template for MVC4 project
+# aspnetmvc5-minimal
+A new starting template for MVC5 project
 
 # Live Demo
-http://mvc4min.apphb.com/
+http://mvc5min.apphb.com/
 
 ## ^^^
 
