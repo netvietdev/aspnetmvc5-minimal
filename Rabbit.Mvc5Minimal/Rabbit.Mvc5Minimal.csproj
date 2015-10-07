@@ -49,6 +49,10 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Rabbit.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rabbit.Configuration.1.0.1\lib\Rabbit.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Rabbit.IOC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Rabbit.IOC.1.0.0-Beta2\lib\Rabbit.IOC.dll</HintPath>
       <Private>True</Private>
@@ -150,14 +154,21 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Activators\SimpleInjectorInitializer.cs" />
+    <Compile Include="App_Start\ServicesConfiguration\Demo\IocModules\DemoServicesModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\ServicesConfiguration\Demo\Services\DefaultListingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\ServicesConfiguration\Demo\Services\IListingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\ServicesConfiguration\ServicesModule.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Demo\IocModules\ServicesModule.cs" />
-    <Compile Include="Models\Demo\Services\DefaultListingService.cs" />
-    <Compile Include="Models\Demo\Services\IListingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

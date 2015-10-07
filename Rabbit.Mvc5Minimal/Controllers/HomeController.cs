@@ -1,5 +1,5 @@
-﻿using Rabbit.Mvc5Minimal.Models.Demo.Services;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Rabbit.Mvc5Minimal.App_Start.ServicesConfiguration.Demo.Services;
 
 namespace Rabbit.Mvc5Minimal.Controllers
 {

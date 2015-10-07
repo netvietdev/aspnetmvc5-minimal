@@ -8,7 +8,7 @@ using System.Linq;
 using System.Web.Mvc;
 using WebActivator;
 
-[assembly: PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
+[assembly: PreApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
 namespace Rabbit.Mvc5Minimal.App_Start.Activators
 {
