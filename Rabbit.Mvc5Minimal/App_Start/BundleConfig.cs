@@ -1,6 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using Rabbit.Foundation.Configuration;
+using System.Web.Mvc;
 using System.Web.Optimization;
-using Rabbit.Configuration;
 
 namespace Rabbit.Mvc5Minimal.App_Start
 {

@@ -1,4 +1,4 @@
-﻿using Rabbit.Configuration;
+﻿using Rabbit.Foundation.Configuration;
 using Rabbit.IOC;
 using SimpleInjector;
 using SimpleInjector.Packaging;

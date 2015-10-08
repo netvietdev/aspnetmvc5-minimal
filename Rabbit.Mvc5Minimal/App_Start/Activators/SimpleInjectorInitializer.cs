@@ -33,8 +33,9 @@ namespace Rabbit.Mvc5Minimal.App_Start.Activators
         {
             ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly)
                 .CreateModules()
+                .Cast<IPackage>()
                 .ToList()
-                .ForEach(x => ((IPackage)x).RegisterServices(container));
+                .ForEach(x => x.RegisterServices(container));
         }
     }
 }
