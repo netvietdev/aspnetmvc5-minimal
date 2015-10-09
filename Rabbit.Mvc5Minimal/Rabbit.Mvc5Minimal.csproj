@@ -154,13 +154,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Activators\SimpleInjectorInitializer.cs" />
-    <Compile Include="App_Start\ServicesConfiguration\Demo\IocModules\DemoServicesModule.cs">
+    <Compile Include="Models\Demo\IocModules\DemoServicesModule.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="App_Start\ServicesConfiguration\Demo\Services\DefaultListingService.cs">
+    <Compile Include="Models\Demo\Services\DefaultListingService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="App_Start\ServicesConfiguration\Demo\Services\IListingService.cs">
+    <Compile Include="Models\Demo\Services\IListingService.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="App_Start\ServicesConfiguration\ServicesModule.cs" />
@@ -211,7 +211,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
