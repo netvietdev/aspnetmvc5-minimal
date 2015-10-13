@@ -1,5 +1,6 @@
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal.App_Start.Activators;
+using Rabbit.SimpleInjectorDemo.IocModules;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
@@ -31,7 +32,7 @@ namespace Rabbit.Mvc5Minimal.App_Start.Activators
 
         private static void InitializeContainer(Container container)
         {
-            ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly)
+            ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly, typeof(DemoServicesModule).Assembly)
                 .CreateModules()
                 .Cast<IPackage>()
                 .ToList()

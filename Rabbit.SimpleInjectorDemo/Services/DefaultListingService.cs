@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rabbit.Mvc5Minimal.Models.Demo.Services
+namespace Rabbit.SimpleInjectorDemo.Services
 {
     public class DefaultListingService : IListingService
     {

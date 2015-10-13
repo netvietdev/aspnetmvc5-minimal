@@ -1,4 +1,4 @@
-﻿namespace Rabbit.Mvc5Minimal.Models.Demo.Services
+﻿namespace Rabbit.SimpleInjectorDemo.Services
 {
     public interface IListingService
     {

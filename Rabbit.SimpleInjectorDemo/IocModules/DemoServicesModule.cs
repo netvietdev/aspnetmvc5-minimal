@@ -1,9 +1,9 @@
 ﻿using Rabbit.IOC;
-using Rabbit.Mvc5Minimal.Models.Demo.Services;
+using Rabbit.SimpleInjectorDemo.Services;
 using SimpleInjector;
 using SimpleInjector.Packaging;
 
-namespace Rabbit.Mvc5Minimal.Models.Demo.IocModules
+namespace Rabbit.SimpleInjectorDemo.IocModules
 {
     public class DemoServicesModule : ModuleBase, IPackage
     {
