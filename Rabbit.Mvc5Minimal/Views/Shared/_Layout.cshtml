@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
+    @{
+        // Include definitions of bundles, print nothing
+        Html.RenderPartial("_Bundles");
+    }
+
     @Styles.Render("~/Content/bootstrap")
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap-theme")
+    @Styles.Render("~/Content/site")
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <script type="text/javascript">
