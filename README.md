@@ -1,4 +1,6 @@
 # aspnetmvc5-minimal
+Rabbit MVC5 Starter Template
+
 A new starting template for MVC5 project
 
 # Live Demo
