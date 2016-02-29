@@ -1,4 +1,7 @@
 ﻿@using System.Globalization
+@using System.Diagnostics
+@model FileVersionInfo
+
 @{
     ViewBag.Title = "Index";
 }
@@ -19,8 +22,9 @@
 </div>
 <div>
     <label class="label label-info">Server time @DateTime.Now.ToString(CultureInfo.InvariantCulture)</label>
-    <br />
-    Listing count: @ViewBag.ListingCount
+    <p>
+        @Model.Comments
+    </p>
 </div>
 
 <br />

@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Rabbit.Mvc5Minimal")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("An Optimized Starter template for ASP.NET MVC application")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("RabbitSoftware")]
 [assembly: AssemblyProduct("Rabbit.Mvc5Minimal")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © RabbitSoftware 2015")]
+[assembly: AssemblyTrademark("Rabbit.Mvc5Minimal")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

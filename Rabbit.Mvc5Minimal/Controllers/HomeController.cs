@@ -1,4 +1,5 @@
-﻿using Rabbit.SimpleInjectorDemo.Services;
+﻿using System.Diagnostics;
+using Rabbit.SimpleInjectorDemo.Services;
 using System.Web.Mvc;
 
 namespace Rabbit.Mvc5Minimal.Controllers
@@ -16,7 +17,9 @@ namespace Rabbit.Mvc5Minimal.Controllers
         {
             ViewBag.ListingCount = _listingService.Count();
 
-            return View();
+            var versionInfo = FileVersionInfo.GetVersionInfo(typeof(HomeController).Assembly.Location);
+
+            return View(versionInfo);
         }
 
     }
