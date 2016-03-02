@@ -1,5 +1,5 @@
 using Rabbit.IOC;
-using Rabbit.Mvc5Minimal.App_Start.Activators;
+using Rabbit.Mvc5Minimal.App_Start.Global.Activators;
 using Rabbit.SimpleInjectorDemo.IocModules;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
@@ -11,7 +11,7 @@ using WebActivator;
 
 [assembly: PreApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
-namespace Rabbit.Mvc5Minimal.App_Start.Activators
+namespace Rabbit.Mvc5Minimal.App_Start.Global.Activators
 {
     public static class SimpleInjectorInitializer
     {

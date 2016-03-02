@@ -172,8 +172,8 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Activators\SimpleInjectorInitializer.cs" />
-    <Compile Include="App_Start\ServicesConfiguration\ServicesModule.cs" />
+    <Compile Include="App_Start\Global\Activators\SimpleInjectorInitializer.cs" />
+    <Compile Include="App_Start\Global\ServicesModule.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
