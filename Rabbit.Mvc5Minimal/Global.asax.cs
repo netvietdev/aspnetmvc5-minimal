@@ -1,5 +1,4 @@
 ﻿using log4net;
-using Rabbit.Mvc5Minimal.App_Start;
 using System;
 using System.Web;
 using System.Web.Http;

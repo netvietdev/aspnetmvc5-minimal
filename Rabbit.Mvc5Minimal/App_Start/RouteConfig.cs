@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Rabbit.Mvc5Minimal.App_Start
+namespace Rabbit.Mvc5Minimal
 {
     public class RouteConfig
     {

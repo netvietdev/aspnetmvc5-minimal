@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace Rabbit.Mvc5Minimal.App_Start
+namespace Rabbit.Mvc5Minimal
 {
     public static class WebApiConfig
     {

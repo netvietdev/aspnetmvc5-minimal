@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Rabbit.Mvc5Minimal.App_Start
+namespace Rabbit.Mvc5Minimal
 {
     public class FilterConfig
     {

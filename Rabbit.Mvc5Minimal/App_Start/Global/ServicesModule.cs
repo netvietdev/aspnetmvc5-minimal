@@ -3,7 +3,7 @@ using Rabbit.IOC;
 using SimpleInjector;
 using SimpleInjector.Packaging;
 
-namespace Rabbit.Mvc5Minimal.App_Start.Global
+namespace Rabbit.Mvc5Minimal.Global
 {
     public class ServicesModule : ModuleBase, IPackage
     {
