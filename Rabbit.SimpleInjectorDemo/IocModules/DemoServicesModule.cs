@@ -9,7 +9,7 @@ namespace Rabbit.SimpleInjectorDemo.IocModules
     {
         public void RegisterServices(Container container)
         {
-            container.RegisterPerWebRequest<IListingService, DefaultListingService>();
+            container.Register<IListingService, DefaultListingService>(Lifestyle.Scoped);
         }
     }
 }
