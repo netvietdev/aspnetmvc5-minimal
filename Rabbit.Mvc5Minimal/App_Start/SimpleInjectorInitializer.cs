@@ -1,6 +1,5 @@
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal;
-using Rabbit.SimpleInjectorDemo.IocModules;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
@@ -32,7 +31,7 @@ namespace Rabbit.Mvc5Minimal
 
         private static void InitializeContainer(Container container)
         {
-            ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly, typeof(DemoServicesModule).Assembly)
+            ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly)
                 .CreateModules()
                 .Cast<IPackage>()
                 .ToList()
