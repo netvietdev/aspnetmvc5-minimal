@@ -1,4 +1,5 @@
 ﻿using log4net;
+using Logging.StructuredLog4Net;
 using System;
 using System.Diagnostics;
 using System.Web.Mvc;
@@ -9,13 +10,9 @@ namespace Rabbit.Mvc5Minimal.Controllers
     {
         private static readonly ILog Logger = LogManager.GetLogger(typeof(HomeController));
 
-        public HomeController()
-        {
-        }
-
         public ActionResult Index()
         {
-            Logger.DebugFormat("Entered at {0}", DateTime.Now);
+            Logger.Debug("Entered at {@Time}", DateTime.Now);
 
             ViewBag.ListingCount = 0;
 
