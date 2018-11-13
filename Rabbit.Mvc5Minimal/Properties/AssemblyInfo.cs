@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Rabbit.Mvc5Minimal")]
-[assembly: AssemblyDescription("An Optimized Starter template for ASP.NET MVC application")]
+[assembly: AssemblyDescription("An Optimized Starter template for your ASP.NET MVC application")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("RabbitSoftware")]
 [assembly: AssemblyProduct("Rabbit.Mvc5Minimal")]

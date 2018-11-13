@@ -7,12 +7,20 @@
 }
 
 <br />
+
+<div>
+    <label class="label label-info">Server time @DateTime.Now.ToString(CultureInfo.InvariantCulture)</label>
+    <p>
+        @Model.Comments
+    </p>
+</div>
+
 <br />
 <h2 class="label label-info">Index - Welcome</h2>
 <br />
 
 <div class="well">
-    The minimal MVC5 application with
+    The Rabbit MVC5 Started Template is configured with following components:
     <ol>
         <li>Environment version: @Environment.Version</li>
         <li>Bootstrap 3</li>
@@ -22,15 +30,7 @@
         <li>ASPNET MVC 5.2.6</li>
     </ol>
 </div>
-<div>
-    <label class="label label-info">Server time @DateTime.Now.ToString(CultureInfo.InvariantCulture)</label>
-    <p>
-        @Model.Comments
-    </p>
-</div>
 
-<br />
-<br />
 <div>
     <small>
         <a href="https://github.com/netvietdev/aspnetmvc5-minimal">
