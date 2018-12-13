@@ -1,5 +1,6 @@
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal;
+using Rabbit.Mvc5Minimal.Controllers;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Web.Mvc;
 using WebActivator;
 
-[assembly: PreApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
+[assembly: PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
 namespace Rabbit.Mvc5Minimal
 {
@@ -22,7 +23,7 @@ namespace Rabbit.Mvc5Minimal
 
             InitializeContainer(container);
 
-            container.RegisterMvcControllers(typeof(SimpleInjectorInitializer).Assembly);
+            container.RegisterMvcControllers(typeof(HomeController).Assembly);
 
             container.Verify();
 
@@ -32,10 +33,10 @@ namespace Rabbit.Mvc5Minimal
         private static void InitializeContainer(Container container)
         {
             ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly)
-                .CreateModules()
-                .Cast<IPackage>()
-                .ToList()
-                .ForEach(x => x.RegisterServices(container));
+               .CreateModules()
+               .Cast<IPackage>()
+               .ToList()
+               .ForEach(x => x.RegisterServices(container));
         }
     }
 }
