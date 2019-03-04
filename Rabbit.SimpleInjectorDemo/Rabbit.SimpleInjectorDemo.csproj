@@ -42,12 +42,12 @@
       <HintPath>..\packages\Rabbit.IOC.1.0.0-Beta2\lib\Rabbit.IOC.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=4.4.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.4.4.2\lib\net45\SimpleInjector.dll</HintPath>
+    <Reference Include="SimpleInjector, Version=4.4.3.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.4.3\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector.Packaging, Version=4.4.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Packaging.4.4.2\lib\net40\SimpleInjector.Packaging.dll</HintPath>
+    <Reference Include="SimpleInjector.Packaging, Version=4.4.3.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Packaging.4.4.3\lib\net40\SimpleInjector.Packaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
