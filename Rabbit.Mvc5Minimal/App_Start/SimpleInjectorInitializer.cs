@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Web.Mvc;
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal;
 using Rabbit.Mvc5Minimal.Controllers;
@@ -5,11 +7,8 @@ using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
 using SimpleInjector.Packaging;
-using System.Linq;
-using System.Web.Mvc;
-using WebActivator;
 
-[assembly: PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
+[assembly: WebActivator.PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
 namespace Rabbit.Mvc5Minimal
 {
@@ -20,23 +19,23 @@ namespace Rabbit.Mvc5Minimal
         {
             var container = new Container();
             container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
-
+            
             InitializeContainer(container);
 
             container.RegisterMvcControllers(typeof(HomeController).Assembly);
-
+            
             container.Verify();
-
+            
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
         }
-
+     
         private static void InitializeContainer(Container container)
         {
             ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly)
-               .CreateModules()
-               .Cast<IPackage>()
-               .ToList()
-               .ForEach(x => x.RegisterServices(container));
+                           .CreateModules()
+                           .Cast<IPackage>()
+                           .ToList()
+                           .ForEach(x => x.RegisterServices(container));
         }
     }
 }

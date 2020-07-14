@@ -60,7 +60,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Rabbit.Foundation, Version=1.0.0.32496, Culture=neutral, PublicKeyToken=d23bc9f0c654bb35, processorArchitecture=MSIL">
@@ -71,20 +71,20 @@
       <HintPath>..\packages\Rabbit.IOC.1.0.0-Beta2\lib\Rabbit.IOC.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=4.6.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.4.6.0\lib\net45\SimpleInjector.dll</HintPath>
+    <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.5.0.3\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector.Integration.Web, Version=4.6.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Integration.Web.4.6.0\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+    <Reference Include="SimpleInjector.Integration.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.5.0.0\lib\net45\SimpleInjector.Integration.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=4.6.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.4.6.0\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.5.0.0\lib\net45\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector.Packaging, Version=4.6.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.Packaging.4.6.0\lib\net40\SimpleInjector.Packaging.dll</HintPath>
+    <Reference Include="SimpleInjector.Packaging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Packaging.5.0.0\lib\net45\SimpleInjector.Packaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
