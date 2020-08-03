@@ -29,5 +29,13 @@ namespace Rabbit.Mvc5Minimal.Controllers
             return View(versionInfo);
         }
 
+        public ActionResult Test(int id)
+        {
+            return new ContentResult()
+            {
+                Content = "Id is " + id
+            };
+        }
+
     }
 }

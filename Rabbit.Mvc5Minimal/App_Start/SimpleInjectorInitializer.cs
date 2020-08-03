@@ -1,14 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web.Mvc;
+using Elmah.Mvc;
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal;
-using Rabbit.Mvc5Minimal.Controllers;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
 using SimpleInjector.Packaging;
+using WebActivator;
 
-[assembly: WebActivator.PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
+[assembly: PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 
 namespace Rabbit.Mvc5Minimal
 {
@@ -19,23 +24,50 @@ namespace Rabbit.Mvc5Minimal
         {
             var container = new Container();
             container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
-            
+
             InitializeContainer(container);
 
-            container.RegisterMvcControllers(typeof(HomeController).Assembly);
-            
+            container.RegisterMvcControllers(
+                typeof(SimpleInjectorInitializer).Assembly,
+                typeof(ElmahController).Assembly);
+
             container.Verify();
-            
+
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
         }
-     
+
         private static void InitializeContainer(Container container)
         {
-            ModuleHelper.GetModuleTypes(typeof(SimpleInjectorInitializer).Assembly)
-                           .CreateModules()
-                           .Cast<IPackage>()
-                           .ToList()
-                           .ForEach(x => x.RegisterServices(container));
+            var assemblies = GetAllAssemblies().ToArray();
+
+            ModuleHelper.GetModuleTypes(assemblies)
+                .CreateModules()
+                .Cast<IPackage>()
+                .ToList()
+                .ForEach(x => x.RegisterServices(container));
+        }
+
+        private static IEnumerable<Assembly> GetAllAssemblies()
+        {
+            var binPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin");
+
+            var excludes = new List<string>
+            {
+                "System.",
+                "SimpleInjector.",
+                "Microsoft.",
+                "Newtonsoft.",
+                "WebActivator.",
+                "WebGrease."
+            };
+
+            return Directory.GetFiles(binPath, "*.dll")
+                .Where(x => !excludes.Any(y =>
+                {
+                    var fileName = Path.GetFileName(x);
+                    return (fileName != null) && fileName.StartsWith(y);
+                }))
+                .Select(Assembly.LoadFile);
         }
     }
 }
