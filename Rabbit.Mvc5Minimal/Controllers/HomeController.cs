@@ -23,6 +23,7 @@ namespace Rabbit.Mvc5Minimal.Controllers
 
             ViewBag.ListingCount = 0;
             ViewBag.webpagesEnabled = _configuration.Get("webpages:Enabled");
+            ViewBag.BuildDate = Properties.Resources.BuildDate;
 
             var versionInfo = FileVersionInfo.GetVersionInfo(typeof(HomeController).Assembly.Location);
 
