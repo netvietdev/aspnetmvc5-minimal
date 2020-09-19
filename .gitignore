@@ -158,3 +158,4 @@ $RECYCLE.BIN/
 /NuGet.Rabbit.SimpleInjectorDemo/*.nupkg
 /NuGet.Rabbit.SimpleInjectorDemo/*.bak
 /PublishOutput
+/Dockers/PublishOutput

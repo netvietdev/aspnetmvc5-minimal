@@ -4,16 +4,20 @@ using Rabbit.Foundation.Configuration;
 using System;
 using System.Diagnostics;
 using System.Web.Mvc;
+using Rabbit.Business;
 
 namespace Rabbit.Mvc5Minimal.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IConfiguration _configuration;
         private static readonly ILog Logger = LogManager.GetLogger(typeof(HomeController));
 
-        public HomeController(IConfiguration configuration)
+        private readonly IConfiguration _configuration;
+        private readonly ISimpleRunnerService _runnerService;
+
+        public HomeController(IConfiguration configuration, ISimpleRunnerService runnerService)
         {
+            _runnerService = runnerService;
             _configuration = configuration;
         }
 
@@ -21,7 +25,9 @@ namespace Rabbit.Mvc5Minimal.Controllers
         {
             Logger.Debug("Entered at {@Time}", DateTime.Now);
 
-            ViewBag.ListingCount = 0;
+            var msg = _runnerService.Run();
+
+            ViewBag.ServiceMessage = msg;
             ViewBag.webpagesEnabled = _configuration.Get("webpages:Enabled");
 
             var versionInfo = FileVersionInfo.GetVersionInfo(typeof(HomeController).Assembly.Location);
