@@ -29,10 +29,19 @@ namespace Rabbit.Mvc5Minimal.Controllers
 
             ViewBag.ServiceMessage = msg;
             ViewBag.webpagesEnabled = _configuration.Get("webpages:Enabled");
+            ViewBag.BuildDate = Properties.Resources.BuildDate;
 
             var versionInfo = FileVersionInfo.GetVersionInfo(typeof(HomeController).Assembly.Location);
 
             return View(versionInfo);
+        }
+
+        public ActionResult Test(int id)
+        {
+            return new ContentResult()
+            {
+                Content = "Id is " + id
+            };
         }
 
     }

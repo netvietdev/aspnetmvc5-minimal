@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Web.Mvc;
+using Elmah.Mvc;
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal;
-using Rabbit.Mvc5Minimal.Controllers;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
@@ -27,7 +27,9 @@ namespace Rabbit.Mvc5Minimal
 
             InitializeContainer(container);
 
-            container.RegisterMvcControllers(typeof(HomeController).Assembly);
+            container.RegisterMvcControllers(
+                typeof(SimpleInjectorInitializer).Assembly,
+                typeof(ElmahController).Assembly);
 
             container.Verify();
 
@@ -49,8 +51,22 @@ namespace Rabbit.Mvc5Minimal
         {
             var binPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin");
 
+            var excludes = new List<string>
+            {
+                "System.",
+                "SimpleInjector.",
+                "Microsoft.",
+                "Newtonsoft.",
+                "WebActivator.",
+                "WebGrease."
+            };
+
             return Directory.GetFiles(binPath, "*.dll")
-                .Where(x => !x.StartsWith("System."))
+                .Where(x => !excludes.Any(y =>
+                {
+                    var fileName = Path.GetFileName(x);
+                    return (fileName != null) && fileName.StartsWith(y);
+                }))
                 .Select(Assembly.LoadFile);
         }
     }
