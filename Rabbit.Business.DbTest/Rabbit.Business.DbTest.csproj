@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IoC\SimpleDbRunnerModule.cs" />
+    <Compile Include="NoDbRunnerService.cs" />
     <Compile Include="SimpleDbRunnerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

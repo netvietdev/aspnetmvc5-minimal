@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using Dapper;
 
 namespace Rabbit.Business.DbTest
 {
@@ -11,13 +11,14 @@ namespace Rabbit.Business.DbTest
         public string Run()
         {
             var nbItems = CountItemsFromDb();
+
             return string.Format("{0} found {1} items from database at {2}",
-                typeof (SimpleDbRunnerService).Name,
+                typeof(SimpleDbRunnerService).Name,
                 nbItems,
                 DateTime.Now);
         }
 
-        private int CountItemsFromDb()
+        private static int CountItemsFromDb()
         {
             var connectionString = ConfigurationManager.ConnectionStrings["DefaultDb"].ConnectionString;
             const string sql = "UPDATE [Item] SET [UpdatedAt] = GETDATE()";
