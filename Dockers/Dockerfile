@@ -8,4 +8,5 @@ COPY ./PublishOutput/ /inetpub/wwwroot
 COPY ./Startup /Startup
 
 # change entrypoint to startup script
-ENTRYPOINT ["powershell.exe", "C:\\Startup\\Startup.ps1"]
+#ENTRYPOINT ["powershell.exe", "C:\\Startup\\Startup.ps1"]
+ENTRYPOINT ["powershell.exe", "C:\\Startup\\StartupTransform.ps1"]
