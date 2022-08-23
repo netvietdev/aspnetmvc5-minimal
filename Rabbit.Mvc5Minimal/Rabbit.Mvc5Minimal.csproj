@@ -254,6 +254,10 @@
       <Project>{f71658fc-d304-43b0-8a69-3490271632a8}</Project>
       <Name>Rabbit.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rabbit.SimpleInjectorDemo\Rabbit.SimpleInjectorDemo.csproj">
+      <Project>{6eebf681-0b20-43a1-b8b1-f1361c3a34f9}</Project>
+      <Name>Rabbit.SimpleInjectorDemo</Name>
+    </ProjectReference>
   </ItemGroup>
   <!--<PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

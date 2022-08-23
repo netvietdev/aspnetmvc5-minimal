@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Web.Mvc;
 using Elmah.Mvc;
 using Rabbit.IOC;
 using Rabbit.Mvc5Minimal;
@@ -11,6 +5,12 @@ using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
 using SimpleInjector.Packaging;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Web.Mvc;
 using WebActivator;
 
 [assembly: PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
