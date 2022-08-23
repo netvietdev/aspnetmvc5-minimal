@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Demo.Lib1;
 using System.Web.Mvc;
 
 namespace Rabbit.Mvc5Minimal2.Controllers
@@ -10,6 +7,8 @@ namespace Rabbit.Mvc5Minimal2.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.DateTimeNow = Utils.GetDate();
+
             return View();
         }
 
