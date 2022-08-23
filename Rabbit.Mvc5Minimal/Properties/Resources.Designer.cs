@@ -19,7 +19,7 @@ namespace Rabbit.Mvc5Minimal.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,7 +61,7 @@ namespace Rabbit.Mvc5Minimal.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mon 08/03/2020 13:38:40.42 
+        ///   Looks up a localized string similar to Tue 08/23/2022  9:42:39.08 
         ///.
         /// </summary>
         internal static string BuildDate {
