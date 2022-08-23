@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.Mvc5Minimal", "Rabbit.Mvc5Minimal\Rabbit.Mvc5Minimal.csproj", "{C75D76DF-BA9D-4F3F-9684-E5B53CD74C2A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.SimpleInjectorDemo", "Rabbit.SimpleInjectorDemo\Rabbit.SimpleInjectorDemo.csproj", "{6EEBF681-0B20-43A1-B8B1-F1361C3A34F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.Business", "Rabbit.Business\Rabbit.Business.csproj", "{F71658FC-D304-43B0-8A69-3490271632A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.Business.DbTest", "Rabbit.Business.DbTest\Rabbit.Business.DbTest.csproj", "{52EC9222-774F-4FBD-9B28-BAB2675F43F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.Mvc5Minimal2", "Rabbit.Mvc5Minimal2\Rabbit.Mvc5Minimal2.csproj", "{F8215194-4529-45F4-B42F-B4DC6B7802F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C75D76DF-BA9D-4F3F-9684-E5B53CD74C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C75D76DF-BA9D-4F3F-9684-E5B53CD74C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C75D76DF-BA9D-4F3F-9684-E5B53CD74C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C75D76DF-BA9D-4F3F-9684-E5B53CD74C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6EEBF681-0B20-43A1-B8B1-F1361C3A34F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6EEBF681-0B20-43A1-B8B1-F1361C3A34F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EEBF681-0B20-43A1-B8B1-F1361C3A34F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{52EC9222-774F-4FBD-9B28-BAB2675F43F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52EC9222-774F-4FBD-9B28-BAB2675F43F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52EC9222-774F-4FBD-9B28-BAB2675F43F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8215194-4529-45F4-B42F-B4DC6B7802F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8215194-4529-45F4-B42F-B4DC6B7802F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8215194-4529-45F4-B42F-B4DC6B7802F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8215194-4529-45F4-B42F-B4DC6B7802F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
