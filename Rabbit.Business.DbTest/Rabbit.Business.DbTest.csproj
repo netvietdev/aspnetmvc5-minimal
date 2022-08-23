@@ -62,12 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Rabbit.Business\Rabbit.Business.csproj">
-      <Project>{f71658fc-d304-43b0-8a69-3490271632a8}</Project>
-      <Name>Rabbit.Business</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
