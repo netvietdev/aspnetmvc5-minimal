@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Mvc5Minimal'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_7c6b4a7693ac4d9a83833d69b441d7c2 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_Mvc5Minimal }}
           package: .
